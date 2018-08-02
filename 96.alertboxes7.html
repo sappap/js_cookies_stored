@@ -1,0 +1,56 @@
+
+
+<!--syntax:document.cookie =" cookiename = value of a cookie "-->
+<!--split the cookie-->
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+    
+    <title> Cookies </title>
+    
+    
+    </head>
+    
+<body>
+    <p id="myParagraph"> Javascript:</p>
+    
+<script>  
+
+//    <!--:document.cookie= " cookiename = value of a cookie "-->
+    
+    document.cookie= "Username = Sam";
+    document.cookie= "Age = 28";
+    document.cookie= "Country = India";
+
+//    window.alert(document.cookie);
+    
+    var cookie= document.cookie.split(';');
+    
+//    array of cookie stored in a cookie variable
+    
+    window.alert(cookie);
+    
+//    here cookiename seperated by ',' using.split==which shows an array of a cookie.
+    
+
+    for(i=0; i<cookie.length; i++){
+        
+//        cookie.length=measure length of an array
+        
+    document.getElementById("myParagraph").innerHTML += "<br />" + cookie [i] 
+    
+    //    now we will add array of a cookie to a pragraph using 'id'[using split it becomes an array] with previous data += cookie [i] cause an array.
+    }
+</script>    
+    
+
+</body>
+
+
+</html>
